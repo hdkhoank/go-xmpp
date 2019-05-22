@@ -657,6 +657,7 @@ func (c *Client) Recv() (stanza interface{}, err error) {
 func (c *Client) Send(chat Chat) (n int, err error) {
 	var subtext = ``
 	var thdtext = ``
+	var pctext =``
 	if chat.Subject != `` {
 		subtext = `<subject>` + xmlEscape(chat.Subject) + `</subject>`
 	}
